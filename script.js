@@ -2,6 +2,8 @@ var mykey=config.MY_KEY;
 var myDatabase = config.databaseURL;
 var myStorage = config.storageBucket;
 
+
+
 $(document).ready(function(){
 	$('#more').click(function() {
 		//move to next kitty
@@ -14,7 +16,7 @@ $(document).ready(function(){
 	})
 
 	// Get a reference to the database service
-
+	
 	
 });
 

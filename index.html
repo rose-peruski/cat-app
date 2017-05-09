@@ -18,8 +18,38 @@
   };
   firebase.initializeApp(config);
 
-var ref = firebase.database().ref("translations");
+var ref = firebase.database().ref("translations/");
 console.log(ref);
+
+var eightRef = firebase.database().ref("translations/eight");
+console.log(eightRef);
+var key = eightRef.key;  // key === "eight"
+key = eightRef.child("eight/cat").key;  // key === "last"
+console.log("Key: " + key);
+
+ref.on("value", function(snapshot) {
+   console.log(snapshot.val());
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+
+var ref = firebase.database().ref("translations/one");
+ref.once("value")
+  .then(function(snapshot) {
+    var a = snapshot.exists();  // true
+    var b = snapshot.child("cat").val();
+    var c = snapshot.child("english").val(); // true
+    var d = snapshot.child("num").val(); // false
+    console.log(a + " " + b+ " "+c + " "+ d);
+    
+    $(document).ready(function() {
+    $('#cat-word').append("<p>" + b + "</p>");
+    $('#english').append("<p>" + c + "</p>")
+  });
+
+  });
+
+  
 
 function toggleSignIn() {
         if (firebase.auth().currentUser) {
@@ -82,8 +112,8 @@ function toggleSignIn() {
             //   document.getElementById('quickstart-verify-email').disabled = false;
             // }
 
-             document.getElementById('member-content').textContent = 'Member Only Statement!';
-             document.getElementById('quickstart-sign-in2').disabled = true;
+            // document.getElementById('member-content').textContent = 'Member Only Statement!';
+             
             //document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
             if (!emailVerified) {
               document.getElementById('quickstart-verify-email').disabled = false;
@@ -171,7 +201,7 @@ function toggleSignIn() {
   
   <!-- div for translation -->
   <button id="more">More Kitties!</button>
-  <div></div>
+  <div id="english">Translation</div>
   <!-- div for adding files -->
   <div>
     <button id="add">Add your own-coming soon!</button>
