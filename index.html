@@ -18,15 +18,48 @@
   };
   firebase.initializeApp(config);
 
-var ref = firebase.database().ref();
-console.log(ref);
+// var ref = firebase.database().ref("translations");
+// console.log(ref);
+// ref.on('value', function(snapshot) {
+//     snapshot.forEach(function(childSnapshot) {
+//       var childData = childSnapshot.val();
+//     });
+//     console.log(childData);
+// });
 
-var database = firebase.database();
-console.log("database: " + database);
+// document.getElementById('users-name').textContent = displayName;
+//             ref.on("value", function(snapshot) {
+//               value = snapshot.val();
+//               keyValues = Object.values(value);
+//               var keyNames = Object.keys(value);
+          
+//               for (var i in keyNames) {
+//                 document.getElementById('cat-word' + i).innerHTML = "<p>" + keyNames[i] + ": " + keyValues[i] + "</p>";
+//               }
+            
+//             }, function (error) {
+//                document.getElementById('testcontent').textContent = 'Database Error';
+//             });
+
+// ref.orderByChild("translations/cat").on("value", function(snapshot){
+//     console.log(snapshot.numChildren());
+// })
+
+// var database = firebase.database();
+// console.log("database: " + database);
+
+// var translations = firebase.database().ref('translations/');
+// console.log(translations);
+// translations.on('value', function(snapshot) {
+//   updatetranslations(postElement, snapshot.val());
+// });
+// return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+//   var username = snapshot.val().username;
 
 
 
 </script>
+
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 
   <title>My Shakespearean Kitty</title>
@@ -45,8 +78,8 @@ console.log("database: " + database);
   <!-- div for the cat pictures from api -->
   <div></div>
   <!-- image for thought bubble -->
-  <div>
-    <img src="">
+  <div id = "cat-word">
+    <img src="images/bubble0.1.png">
   </div>
   
   <!-- div for translation -->
