@@ -1,0 +1,54 @@
+{
+  "translations" : {
+    "one" : 
+    {
+    "cat": "Meow",
+    "english": " It is yet another common day in this dull, drab world in which I specifically enlighten it and bless it with my presence. Nary a moment goes by in which every living creature must yield to my whim for I am beauty incarnate."
+  },
+  "two" :
+  {
+    "cat": "Mew" ,
+    "english" : "What demonic trickery is this in which the sun itself denies me its warm and supple light. I require to bask in such holy warmth which cannot be given by earthly domains."
+  },
+  "three" :
+  {
+    "cat": "Hiss",
+    "english" : "Lo and foth, foul creature. Thy mortal coil is but seconds if you proceed to unsuccessfully entertain me, for thine skin too soft by tooth and claw."
+  },
+  "four" :
+  {
+    "cat": "Grr", 
+    "english" : "You curse me, you do. Curse me to an existence where I must endure such banes as hunger, one for which your irresponsibility has brought failure to cause. "
+  },
+  "five" :
+  {
+    "cat": "Purr",
+    "english" : "I am quite pleased due to my local surroundings, though I am quick to boredom. You may continue to entertain me but know it is in vain."
+  },
+  "six" :
+  {
+    "cat": "Zzzz",
+    "english" : "DO NOT DISTURB UPON PAIN OF DEATH"
+  },
+  "seven" :
+  {
+    "cat":"Reow" ,
+    "english" : "Beware, mine prey, for you shall meet your nimrod as he approacheth..."
+  },
+  "eight" :
+  {
+    "cat": "Rrrrr",
+    "english" : "You have failed me, pitiful blob of flesh and breath. The bowels of my being wretch in absolute suffering caused from a complete diet of insolence."
+  },
+  "nine" :
+  {
+    "cat": "Ffftft",
+    "english" : "You daft creature! You dare spoil the the earthly grounds for which upon I lay with your presence?! This will be an act of aggression I none shall forgive."
+  },
+  "ten" :
+  {
+    "cat":"Eeeer" ,
+    "english" : "Unfounded tall wooden barricade, I demand you depart and allow me to transition outside!"
+  }
+}
+}
