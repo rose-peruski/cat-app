@@ -1,0 +1,27 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] CLI Version:  3.7.0
+[debug] Platform:     darwin
+[debug] Node Version: v6.10.0
+[debug] Time:         Tue May 09 2017 11:22:56 GMT-0400 (EDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cat-translator-d282b  
+ Tue May 09 2017 11:22:56 GMT-0400 (EDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cat-translator-d282b/tokens  
+ Tue May 09 2017 11:22:57 GMT-0400 (EDT)
+[debug] <<< HTTP RESPONSE 200
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/detroitlabs/Desktop/Quails/cat-translator/web-start
+[debug] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cat-translator-d282b  
+ Tue May 09 2017 11:22:58 GMT-0400 (EDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/877874555995/clients/_:getWebAppConfig  
+ Tue May 09 2017 11:22:58 GMT-0400 (EDT)
+[debug] <<< HTTP RESPONSE 200
+[info] Public Directory: ./
+[info] 
+[info] Server listening at: http://localhost:5000

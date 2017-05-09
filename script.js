@@ -8,4 +8,8 @@ $(document).ready(function(){
 		//open up add functions
 		alert('Coming soon!');
 	})
+
+	// Get a reference to the database service
+	var mykey=config.MY_KEY;
+	
 });

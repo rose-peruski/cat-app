@@ -2,19 +2,43 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type='text/javascript' src='config.js'></script>
   <script src="script.js"></script>
-  <script src="/__/firebase/3.9.0/firebase-app.js"></script>
-  <script src="/__/firebase/3.9.0/firebase-auth.js"></script>
-  <script src="/__/firebase/init.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: mykey,
+    authDomain: "cat-translator-d282b.firebaseapp.com",
+    databaseURL: "https://cat-translator-d282b.firebaseio.com",
+    projectId: "cat-translator-d282b",
+    storageBucket: "cat-translator-d282b.appspot.com",
+    messagingSenderId: "877874555995"
+  };
+  firebase.initializeApp(config);
+</script>
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <title>My Shakespearean Kitty</title>
+  <!-- <script>
+    var database = firebase.database();
+
+  var catWords = firebase.database().ref('eight/' + '/cat');
+  catWords.on('value', function(snapshot) {
+    console.log('the cat word for eight is ' + catWords);
+  });
+
+  console.log('is it reading my script?')
+   </script> -->
 </head>
 <body>
   <!-- div for the cat pictures from api -->
   <div></div>
   <!-- image for thought bubble -->
-  <img src="">
+  <div>
+    <img src="">
+  </div>
+  
   <!-- div for translation -->
   <button id="more">More Kitties!</button>
   <div></div>
