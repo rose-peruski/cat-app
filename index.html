@@ -5,19 +5,29 @@
 <script type='text/javascript' src='config.js'></script>
   <script src="script.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js"></script> -->
 <script>
   // Initialize Firebase
   var config = {
     apiKey: mykey,
     authDomain: "cat-translator-d282b.firebaseapp.com",
-    databaseURL: "https://cat-translator-d282b.firebaseio.com",
+    databaseURL: myDatabase ,
     projectId: "cat-translator-d282b",
-    storageBucket: "cat-translator-d282b.appspot.com",
+    storageBucket: myStorage ,
     messagingSenderId: "877874555995"
   };
   firebase.initializeApp(config);
+
+var ref = firebase.database().ref();
+console.log(ref);
+
+var database = firebase.database();
+console.log("database: " + database);
+
+
+
 </script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 
   <title>My Shakespearean Kitty</title>
   <!-- <script>
