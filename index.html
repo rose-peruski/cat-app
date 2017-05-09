@@ -18,8 +18,95 @@
   };
   firebase.initializeApp(config);
 
-// var ref = firebase.database().ref("translations");
-// console.log(ref);
+var ref = firebase.database().ref("translations");
+console.log(ref);
+
+function toggleSignIn() {
+        if (firebase.auth().currentUser) {
+          // [START signout]
+          firebase.auth().signOut();
+          // [END signout]
+        } else {
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+          if (email.length < 4) {
+            alert('Please enter an email address.');
+            return;
+          }
+          if (password.length < 4) {
+            alert('Please enter a password.');
+            return;
+          }
+          // Sign in with email and pass.
+          // [START authwithemail]
+          firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // [START_EXCLUDE]
+            if (errorCode === 'auth/wrong-password') {
+              alert('Wrong password.');
+            } else {
+              alert(errorMessage);
+            }
+            console.log(error);
+            document.getElementById('quickstart-sign-in').disabled = false;
+            // [END_EXCLUDE]
+          });
+        // [END authwithemail]
+        }
+        document.getElementById('quickstart-sign-in').disabled = true;   
+      }
+      function initApp() {
+        // Listening for auth state changes.
+        // [START authstatelistener]
+        firebase.auth().onAuthStateChanged(function(user) {
+          // [START_EXCLUDE silent]
+          document.getElementById('quickstart-verify-email').disabled = true;
+          // [END_EXCLUDE]
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            // [START_EXCLUDE]
+            document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
+            document.getElementById('quickstart-sign-in').textContent = 'Sign out';
+            
+            //document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+            // if (!emailVerified) {
+            //   document.getElementById('quickstart-verify-email').disabled = false;
+            // }
+
+             document.getElementById('member-content').textContent = 'Member Only Statement!';
+             document.getElementById('quickstart-sign-in2').disabled = true;
+            //document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+            if (!emailVerified) {
+              document.getElementById('quickstart-verify-email').disabled = false;
+            }
+            // [END_EXCLUDE]
+          } else {
+            // User is signed out.
+            // [START_EXCLUDE]
+            document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
+            document.getElementById('quickstart-sign-in').textContent = 'Sign in';
+            
+          }
+          // [START_EXCLUDE silent]
+          document.getElementById('quickstart-sign-in').disabled = false;
+          // [END_EXCLUDE]
+        });
+        // [END authstatelistener]
+        document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
+        
+      }
+      window.onload = function() {
+        initApp();
+      };
 // ref.on('value', function(snapshot) {
 //     snapshot.forEach(function(childSnapshot) {
 //       var childData = childSnapshot.val();
@@ -89,6 +176,19 @@
   <div>
     <button id="add">Add your own-coming soon!</button>
   </div>
-  
+  <div id="container">
+      <p>Enter your email and password below</p>
+      <input style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+      &nbsp;&nbsp;&nbsp;
+      <input  style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+      <br/><br/>
+      <button id="quickstart-sign-in" name="signin">Sign In</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
+      <!-- <h1>Google Authentication </h1>
+      <p>Please sign in with your Google account below.</p>
+      <button id="quickstart-sign-in2" class="btn">Sign in with Google</button> -->
+      <p>Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+      <pre><code id="quickstart-account-details"></code></pre></p>
+    </div>
 </body>
 </html>
