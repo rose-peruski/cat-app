@@ -19,7 +19,18 @@
   firebase.initializeApp(config);
 
 var ref = firebase.database().ref("translations/");
-console.log(ref);
+ref.on("value", function(snapshot) {
+              value = snapshot.val();
+              keyValues = Object.values(value);
+              var keyNames = Object.keys(value);
+              console.log("ref value:" + value);
+              console.log("key values: " + keyValues);
+              console.log("key names: " + keyNames);
+          
+              for (var i in keyNames) {
+                document.getElementById('cat' + i).innerHTML = "<p>" + keyNames[i] + ": " + keyValues[i] + "</p>";
+              }
+            })  ;
 
 var eightRef = firebase.database().ref("translations/eight");
 console.log(eightRef);
@@ -107,14 +118,7 @@ function toggleSignIn() {
             document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
             document.getElementById('quickstart-sign-in').textContent = 'Sign out';
             
-            //document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-            // if (!emailVerified) {
-            //   document.getElementById('quickstart-verify-email').disabled = false;
-            // }
-
-            // document.getElementById('member-content').textContent = 'Member Only Statement!';
-             
-            //document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+            
             if (!emailVerified) {
               document.getElementById('quickstart-verify-email').disabled = false;
             }
@@ -137,41 +141,7 @@ function toggleSignIn() {
       window.onload = function() {
         initApp();
       };
-// ref.on('value', function(snapshot) {
-//     snapshot.forEach(function(childSnapshot) {
-//       var childData = childSnapshot.val();
-//     });
-//     console.log(childData);
-// });
 
-// document.getElementById('users-name').textContent = displayName;
-//             ref.on("value", function(snapshot) {
-//               value = snapshot.val();
-//               keyValues = Object.values(value);
-//               var keyNames = Object.keys(value);
-          
-//               for (var i in keyNames) {
-//                 document.getElementById('cat-word' + i).innerHTML = "<p>" + keyNames[i] + ": " + keyValues[i] + "</p>";
-//               }
-            
-//             }, function (error) {
-//                document.getElementById('testcontent').textContent = 'Database Error';
-//             });
-
-// ref.orderByChild("translations/cat").on("value", function(snapshot){
-//     console.log(snapshot.numChildren());
-// })
-
-// var database = firebase.database();
-// console.log("database: " + database);
-
-// var translations = firebase.database().ref('translations/');
-// console.log(translations);
-// translations.on('value', function(snapshot) {
-//   updatetranslations(postElement, snapshot.val());
-// });
-// return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-//   var username = snapshot.val().username;
 
 
 
@@ -180,16 +150,7 @@ function toggleSignIn() {
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 
   <title>My Shakespearean Kitty</title>
-  <!-- <script>
-    var database = firebase.database();
-
-  var catWords = firebase.database().ref('eight/' + '/cat');
-  catWords.on('value', function(snapshot) {
-    console.log('the cat word for eight is ' + catWords);
-  });
-
-  console.log('is it reading my script?')
-   </script> -->
+  
 </head>
 <body>
   <!-- div for the cat pictures from api -->
@@ -206,6 +167,19 @@ function toggleSignIn() {
   <div>
     <button id="add">Add your own-coming soon!</button>
   </div>
+
+        <div id="cat0"></div>
+        <div id="cat1"></div>
+        <div id="cat2"></div>
+        <div id="cat3"></div>
+        <div id="cat4"></div>
+        <div id="cat5"></div>
+        <div id="cat6"></div>
+        <div id="cat7"></div>
+        <div id="cat8"></div>
+        <div id="cat9"></div>
+        
+
   <div id="container">
       <p>Enter your email and password below</p>
       <input style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
