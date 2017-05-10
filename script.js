@@ -29,23 +29,28 @@ $(document).ready(function(){
             });
 		$('#finish-add').show().click(function() {
 
-			catCreate = new Cat(kittyWord, kittyTranslation, count);
-			console.log(catCreate);
+			pushCat();
 			count++
 
-				ref.push({
-		      cat: kittyWord,
-		      english: kittyTranslation,
-		      num: count
-		    })
+
+				
 		});
 	})
 
-	
+
 	// Get a reference to the database service
 
 	
 });
+
+var pushCat = function() {
+			addCount = count.toString();
+				ref.push({
+		      cat: kittyWord,
+		      english: kittyTranslation,
+		      num: addCount
+		    });
+}
 
 function Cat(word, engTrans, num) {
 	this.word=word;

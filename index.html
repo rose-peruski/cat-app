@@ -21,6 +21,12 @@
   firebase.initializeApp(config);
 
   var ref = firebase.database().ref("translations/");
+
+   ref.on("child_added", function(data, prevChildKey) {
+    var transAdded = data.val();
+    console.log("cat sound: " + transAdded.cat);
+    console.log("num: " + transAdded.num);
+  });
 // ref.on("value", function(snapshot) {
 //               value = snapshot.val();
 //               keyValues = Object.values(value);
@@ -224,27 +230,32 @@ var ten = function() {
 function chooser() {
   
   var num = Math.floor(Math.random() * (count - 10)) + 1;
-  if (num==1) {
-    one();
-  } else if(num==2){
-    two();
-  } else if (num==3){
-    three();
-  }else if (num==4){
-    four();
-  }else if (num==5){
-    five();
-  }else if (num==6){
-    six();
-  }else if (num==7){
-  seven();
-  }else if (num==8){
-    eight();
-  }else if (num==9){
-    nine();
-  }else {
-    ten();
-  } 
+    console.log("random num:" +num)
+    stringNum=num.toString();
+    ref.orderByChild("num").equalTo(stringNum).on("value", function(data) {
+     console.log("Equal to filter: " + data.val().num);
+  });
+  // if (num==1) {
+  //   one();
+  // } else if(num==2){
+  //   two();
+  // } else if (num==3){
+  //   three();
+  // }else if (num==4){
+  //   four();
+  // }else if (num==5){
+  //   five();
+  // }else if (num==6){
+  //   six();
+  // }else if (num==7){
+  // seven();
+  // }else if (num==8){
+  //   eight();
+  // }else if (num==9){
+  //   nine();
+  // }else {
+  //   ten();
+  // } 
 
 }
 
@@ -349,7 +360,7 @@ function toggleSignIn() {
   
 </head>
 <body>
-  
+
   <!-- div for the cat pictures from api -->
   <div id="cat-pic"></div>
   <!-- image for thought bubble -->
