@@ -7,7 +7,8 @@ var myStorage = config.storageBucket;
 $(document).ready(function(){
 	$('#more').click(function() {
 		//move to next kitty
-		alert('this will move eventually');
+		window.location='index.html';
+		
 	});
 
 	$('#add').click(function() {
