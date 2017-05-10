@@ -20,7 +20,7 @@
   };
   firebase.initializeApp(config);
 
-//  var ref = firebase.database().ref("translations/");
+  var ref = firebase.database().ref("translations/");
 // ref.on("value", function(snapshot) {
 //               value = snapshot.val();
 //               keyValues = Object.values(value);
@@ -219,18 +219,18 @@ var ten = function() {
 
   });
 };
+
+
 function chooser() {
   
-  var num = Math.floor(Math.random() * (9 - 0)) + 1;
+  var num = Math.floor(Math.random() * (count - 10)) + 1;
   if (num==1) {
     one();
   } else if(num==2){
     two();
   } else if (num==3){
     three();
-
-  
-}else if (num==4){
+  }else if (num==4){
     four();
   }else if (num==5){
     five();
@@ -242,9 +242,10 @@ function chooser() {
     eight();
   }else if (num==9){
     nine();
-  }else  {
+  }else {
     ten();
-  }
+  } 
+
 }
 
 function toggleSignIn() {
