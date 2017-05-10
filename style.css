@@ -1,0 +1,29 @@
+#cat-word {
+	display: inline-block;
+	position: absolute;
+    left: 300px;
+    top: 25px;
+    z-index: -1;
+}
+
+#cat-pic {
+	width:200px;
+	height: 200px;
+	border: 2px solid black;
+	display: inline-block;
+}
+
+#kitty-word {
+	display: inline-block;
+	position: absolute;
+    left: 300px;
+    top: 25px;
+    z-index: 0;
+}
+
+#english {
+	width:600px
+	height: auto;
+	border: 2px solid black;
+
+}

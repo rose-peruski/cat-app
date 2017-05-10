@@ -2,10 +2,13 @@ var mykey=config.MY_KEY;
 var myDatabase = config.databaseURL;
 var myStorage = config.storageBucket;
 
+
+
 $(document).ready(function(){
 	$('#more').click(function() {
 		//move to next kitty
-		alert('this will move eventually');
+		window.location='index.html';
+		
 	});
 
 	$('#add').click(function() {
@@ -17,16 +20,5 @@ $(document).ready(function(){
 
 	
 });
-
-// 'use strict'
-//var firebase = require("firebase");
-// var defaultApp = firebase.initializeApp(defaultAppConfig);
-
-// console.log(defaultApp.name);  // "[DEFAULT]"
-
-// // You can retrieve services via the defaultApp variable...
-// var defaultStorage = defaultApp.storage();
-// var defaultDatabase = defaultApp.database();
-
 
 
