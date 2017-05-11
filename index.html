@@ -10,6 +10,7 @@
   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js"></script>
 <script>
   // Initialize Firebase
+
   var config = {
     apiKey: mykey,
     authDomain: "cat-translator-d282b.firebaseapp.com",
@@ -221,26 +222,49 @@ var ten = function() {
 };
 function chooser() {
   
-  var num = Math.floor(Math.random() * (9 - 0)) + 1;
-  if (num==1) {
+  var randomNum = Math.floor(Math.random() * (count - 0)) + 1;
+  randomNum=randomNum.toString();
+  
+  ref.orderByChild("num").equalTo(randomNum).on("child_added", function(data) {
+   console.log("Equal to filter: " + data.val().num);
+
+
+  // .once("value").then(function(snapshot) 
+  // {
+  //     var a = snapshot.exists();  // true
+  //     var b = snapshot.child("cat").val();
+  //     var c = snapshot.child("english").val(); 
+  //     var d = snapshot.child("num").val(); 
+  //     console.log(a + " " + b+ " "+c + " "+ d);
+      
+  //     $(document).ready(function() {
+  //     $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+  //     $('#english').append("<p>" + c + "</p>")
+
+
+  //   });
+
+  });
+
+  if (randomNum==1) {
     one();
-  } else if(num==2){
+  } else if(randomNum==2){
     two();
-  } else if (num==3){
+  } else if (randomNum==3){
     three();
 
   
-}else if (num==4){
+}else if (randomNum==4){
     four();
-  }else if (num==5){
+  }else if (randomNum==5){
     five();
-  }else if (num==6){
+  }else if (randomNum==6){
     six();
-  }else if (num==7){
+  }else if (randomNum==7){
   seven();
-  }else if (num==8){
+  }else if (randomNum==8){
     eight();
-  }else if (num==9){
+  }else if (randomNum==9){
     nine();
   }else  {
     ten();
