@@ -32,12 +32,13 @@ $(document).ready(function(){
 
 			catCreate = new Cat(kittyWord, kittyTranslation, count);
 			console.log(catCreate);
+			stringCount = count.toString();
 			count++
 
 				ref.push({
 		      cat: kittyWord,
 		      english: kittyTranslation,
-		      num: count
+		      num: stringCount
 		    })
 		});
 	})
