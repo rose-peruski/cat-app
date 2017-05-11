@@ -6,7 +6,12 @@ var kittyTranslation;
 var count = 12;
 //work dangit
 //workd!
-
+var getCount = function() {
+	var lastRef = firebase.database().ref('translations/').limitToLast(1);
+	lastRef.orderByChild("num").on("child_added", function(data) {
+   	console.log(parseInt(data.val().num));
+	});
+}	
 $(document).ready(function(){
 	$('#more').click(function() {
 		//move to next kitty
