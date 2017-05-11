@@ -21,7 +21,7 @@
   };
   firebase.initializeApp(config);
 
-//  var ref = firebase.database().ref("translations/");
+  var ref = firebase.database().ref("translations/");
 // ref.on("value", function(snapshot) {
 //               value = snapshot.val();
 //               keyValues = Object.values(value);
@@ -356,7 +356,9 @@ function toggleSignIn() {
   </div>
   <!-- image for thought bubble -->
   <div id = "cat-word">
+
     <img id = "bubble" src="images/bubble0.1.png">
+
   </div>
   
   <!-- div for translation -->
