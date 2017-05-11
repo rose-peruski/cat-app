@@ -49,177 +49,177 @@
 
 
 
-  var one = function() {
-    var refOne = firebase.database().ref("translations/one");
-  refOne.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      //console.log(a + " " + b+ " "+c + " "+ d);
+//   var one = function() {
+//     var refOne = firebase.database().ref("translations/one");
+//   refOne.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       //console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
+//   });
+// };
 
-var two = function() {
-    var refTwo = firebase.database().ref("translations/two");
-  refTwo.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+// var two = function() {
+//     var refTwo = firebase.database().ref("translations/two");
+//   refTwo.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
-var three = function() {
-    var refthree = firebase.database().ref("translations/three");
-  refthree.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+//   });
+// };
+// var three = function() {
+//     var refthree = firebase.database().ref("translations/three");
+//   refthree.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
-var four = function() {
-    var reffour = firebase.database().ref("translations/four");
-  reffour.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+//   });
+// };
+// var four = function() {
+//     var reffour = firebase.database().ref("translations/four");
+//   reffour.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
-var five = function() {
-    var reffive = firebase.database().ref("translations/five");
-  reffive.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+//   });
+// };
+// var five = function() {
+//     var reffive = firebase.database().ref("translations/five");
+//   reffive.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
-var six = function() {
-    var refsix = firebase.database().ref("translations/six");
-  refsix.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+//   });
+// };
+// var six = function() {
+//     var refsix = firebase.database().ref("translations/six");
+//   refsix.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
-var seven = function() {
-    var refseven = firebase.database().ref("translations/seven");
-  refseven.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+//   });
+// };
+// var seven = function() {
+//     var refseven = firebase.database().ref("translations/seven");
+//   refseven.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
-var eight = function() {
-    var refeight = firebase.database().ref("translations/eight");
-  refeight.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+//   });
+// };
+// var eight = function() {
+//     var refeight = firebase.database().ref("translations/eight");
+//   refeight.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
-var nine = function() {
-    var refnine = firebase.database().ref("translations/nine");
-  refnine.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+//   });
+// };
+// var nine = function() {
+//     var refnine = firebase.database().ref("translations/nine");
+//   refnine.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
-var ten = function() {
-    var reften = firebase.database().ref("translations/ten");
-  reften.once("value")
-    .then(function(snapshot) {
-      var a = snapshot.exists();  // true
-      var b = snapshot.child("cat").val();
-      var c = snapshot.child("english").val(); // true
-      var d = snapshot.child("num").val(); // false
-      console.log(a + " " + b+ " "+c + " "+ d);
+//   });
+// };
+// var ten = function() {
+//     var reften = firebase.database().ref("translations/ten");
+//   reften.once("value")
+//     .then(function(snapshot) {
+//       var a = snapshot.exists();  // true
+//       var b = snapshot.child("cat").val();
+//       var c = snapshot.child("english").val(); // true
+//       var d = snapshot.child("num").val(); // false
+//       console.log(a + " " + b+ " "+c + " "+ d);
       
-      $(document).ready(function() {
-      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
-      $('#english').append("<p>" + c + "</p>")
-    });
+//       $(document).ready(function() {
+//       $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+//       $('#english').append("<p>" + c + "</p>")
+//     });
 
-  });
-};
+//   });
+// };
 function chooser() {
   
   var randomNum = Math.floor(Math.random() * (count - 0)) + 1;
@@ -227,8 +227,16 @@ function chooser() {
   
   ref.orderByChild("num").equalTo(randomNum).on("child_added", function(data) {
    console.log("Equal to filter: " + data.val().num);
+    // true
+      var b = data.val().cat;
+      var c = data.val().english; // true
+      
+      console.log( "translation: " +b+ " "+c );
 
-
+      $(document).ready(function() {
+      $('#cat-word').append("<p id='kitty-word'>" + b + "</p>");
+      $('#english').append("<p>" + c + "</p>")
+    });
   // .once("value").then(function(snapshot) 
   // {
   //     var a = snapshot.exists();  // true
@@ -246,29 +254,29 @@ function chooser() {
 
   });
 
-  if (randomNum==1) {
-    one();
-  } else if(randomNum==2){
-    two();
-  } else if (randomNum==3){
-    three();
+//   if (randomNum==1) {
+//     one();
+//   } else if(randomNum==2){
+//     two();
+//   } else if (randomNum==3){
+//     three();
 
   
-}else if (randomNum==4){
-    four();
-  }else if (randomNum==5){
-    five();
-  }else if (randomNum==6){
-    six();
-  }else if (randomNum==7){
-  seven();
-  }else if (randomNum==8){
-    eight();
-  }else if (randomNum==9){
-    nine();
-  }else  {
-    ten();
-  }
+// }else if (randomNum==4){
+//     four();
+//   }else if (randomNum==5){
+//     five();
+//   }else if (randomNum==6){
+//     six();
+//   }else if (randomNum==7){
+//   seven();
+//   }else if (randomNum==8){
+//     eight();
+//   }else if (randomNum==9){
+//     nine();
+//   }else  {
+//     ten();
+//   }
 }
 
 function toggleSignIn() {

@@ -3,7 +3,7 @@ var myDatabase = config.databaseURL;
 var myStorage = config.storageBucket;
 var kittyWord;
 var kittyTranslation;
-var count = 10;
+var count = 12;
 //work dangit
 //workd!
 
