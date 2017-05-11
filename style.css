@@ -7,12 +7,20 @@
 }
 
 #cat-pic {
-	width: 100px;
-	height: 100px;
+	width: 300px;
+	height: 300px;
 	border: 4px double black;
 	display: inline-block;
 	width: auto;
 	height: auto;
+/*	overflow: hidden;*/
+	object-fit: fill;
+	/*clip: rect(300px,300px,300px,300px);*/
+}
+
+#bubble {
+	float:right;
+	
 }
 
 #kitty-word {
