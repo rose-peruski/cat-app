@@ -7,10 +7,12 @@
 }
 
 #cat-pic {
-	width: 300px;
-	height: 300px;
+	width: 100px;
+	height: 100px;
 	border: 4px double black;
 	display: inline-block;
+	width: auto;
+	height: auto;
 }
 
 #kitty-word {
