@@ -45,6 +45,9 @@ $(document).ready(function(){
 		      english: kittyTranslation,
 		      num: stringCount
 		    })
+			$('#userCat').hide()
+			$('#english-trans').hide();
+			$('#finish-add').hide();	
 		});
 	})
 
