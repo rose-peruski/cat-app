@@ -11,6 +11,17 @@
 	height: 300px;
 	border: 4px double black;
 	display: inline-block;
+	width: auto;
+	height: auto;
+/*	overflow: hidden;*/
+	object-fit: fill;
+	/*clip: rect(300px,300px,300px,300px);*/
+}
+
+#bubble {
+	padding-left: 200px;
+	padding-bottom: 100px;
+
 }
 
 #kitty-word {
