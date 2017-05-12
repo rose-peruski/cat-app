@@ -9,11 +9,9 @@ var count = 10;
 
 $(document).ready(function(){
 	// $('#more').click(function() {
-	// 	window.location.href = index.html
-	// 	 // window.location.reload(true);
-	// 	//move to next kitty
-	// 	// window.location='index.html';
-	// 	// location.reload(true);
+ 		//move to next kitty
+ // -		window.location='index.html';
+	
 		
 	// });
 	
