@@ -8,11 +8,12 @@ var count = 10;
 //workd!
 
 $(document).ready(function(){
-	$('#more').click(function() {
-		//move to next kitty
-		window.location='index.html';
+	// $('#more').click(function() {
+ 		//move to next kitty
+ // -		window.location='index.html';
+	
 		
-	});
+	// });
 	
 	$('#userCat').hide()
 	$('#english-trans').hide();
