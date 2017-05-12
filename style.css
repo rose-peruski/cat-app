@@ -5,10 +5,9 @@
     top: 40px;
     z-index: -1;
 }
-#cat-pic {
+##cat-pic {
 	/*min-width: 300px;*/
 	min-height: 300px;
-	max-width: 300px
 	width: 300px;
 	height: auto;
 	border: 4px double black;
@@ -25,10 +24,13 @@ img {
 }
 
 #bubble {
-	padding-left: 200px;
-	padding-bottom: 100px;
+	width: auto;
+	height: auto;
+	z-index: 100;
 
 }
+
+
 
 #kitty-word {
 	display: inline-block;

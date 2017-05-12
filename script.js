@@ -47,7 +47,10 @@ $(document).ready(function(){
 		    })
 			$('#userCat').hide()
 			$('#english-trans').hide();
-			$('#finish-add').hide();	
+			$('#finish-add').hide();
+
+
+			$('#kitty-user').append("<p>Thanks for adding! We will review</p>"); 	
 		});
 	})
 
