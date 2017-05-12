@@ -8,11 +8,14 @@ var count = 10;
 //workd!
 
 $(document).ready(function(){
-	$('#more').click(function() {
-		//move to next kitty
-		window.location='index.html';
+	// $('#more').click(function() {
+	// 	window.location.href = index.html
+	// 	 // window.location.reload(true);
+	// 	//move to next kitty
+	// 	// window.location='index.html';
+	// 	// location.reload(true);
 		
-	});
+	// });
 	
 	$('#userCat').hide()
 	$('#english-trans').hide();
