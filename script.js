@@ -46,7 +46,7 @@ $(document).ready(function(){
 			$('#finish-add').hide();
 
 
-			$('#kitty-user').append("<p>Thanks for adding! We will review</p>"); 	
+			$('#kitty-user').append("<p>Thanks for adding! We will review.</p>"); 	
 		});
 	})
 
