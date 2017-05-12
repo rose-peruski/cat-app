@@ -1,8 +1,8 @@
 #cat-word {
 	display: inline-block;
 	position: absolute;
-    left: 320px;
-    top: 40px;
+    left: 340px;
+    top: 50px;
     z-index: -1;
 }
 
@@ -25,23 +25,28 @@ img {
 }
 
 #bubble {
+
 	width: auto;
 	height: auto;
-	z-index: 100;
-
+	z-index: -1;
 }
 
 #kitty-word {
-	display: inline-block;
-	position: absolute;
-    left: 300px;
-    top: 25px;
+	
+	position: relative;
+    left: 0px;
+    top: -185px;
     z-index: 0;
+    font-size: 50px;
+    text-align: center;
+    z-index: 500;
+
 }
 
 #english {
 	margin: left;
 	font-family: courier;
+	padding: 10px;
 	width: 750px;
 	height: auto;
 	border: 2px dotted black;
