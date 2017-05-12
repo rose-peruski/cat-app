@@ -5,17 +5,23 @@
     top: 40px;
     z-index: -1;
 }
-
 #cat-pic {
+	/*min-width: 300px;*/
+	min-height: 300px;
+	max-width: 300px
 	width: 300px;
-	height: 300px;
+	height: auto;
 	border: 4px double black;
 	display: inline-block;
-	width: auto;
-	height: auto;
-/*	overflow: hidden;*/
-	object-fit: fill;
+	background: black;
+	overflow:scroll;
+	/*object-fit: fill;*/
 	/*clip: rect(300px,300px,300px,300px);*/
+}
+
+img {
+	width: 300px;
+	height: 300px;
 }
 
 #bubble {
